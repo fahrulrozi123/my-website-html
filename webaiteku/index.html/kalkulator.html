@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator web</title>
+	<style type="text/css">
+		body{
+			background: silver;
+			font-family: Arial;
+		}
+		.container{
+			background-color: white;
+			width: 300px;
+			margin: 0 auto;
+			min-height: 200px;
+			padding: 10px;
+			overflow: auto;
+		}
+		.output{
+			/*margin: 18px;*/
+			padding: 10px;
+			text-align: right;
+			color: white;
+			background-color: black;
+			font-size: 40px;
+		}
+		.numpad{
+			width: 200px;
+			min-height: 300px;
+			float: left;
+			/*border: 1px solid #999999;*/
+			overflow: auto;
+		}
+		.numpad-grid{
+			width: 100px;
+			display: grid;
+			grid-template-columns: auto auto auto;
+			/*background-color: #2196F3;
+			padding: 10px;*/
+		}
+		.numpad-item{
+			/*background-color: rgba(255, 255, 255, 0.8);
+			border: 1px solid rgba(0, 0, 0, 0.8);*/
+			padding: 20px;
+			font-size: 30px;
+			text-align: center;
+			/*border: 1px solid #999999;*/
+		}
+		.hover:hover{
+			background-color: green;
+			color: white;
+		}
+		.operators{
+			width: 50px;
+			float: right;
+			font-size: 30px;
+			display: grid;
+			grid-template-columns: auto;
+		}
+		.operator-item{
+			/*background-color: rgba(255, 255, 255, 0.8);
+			border: 1px solid rgba(0, 0, 0, 0.8);*/
+			padding: 15px;
+			font-size: 25px;
+			text-align: center;
+			/*border: 1px solid #999999;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h3 style="background-color: black; color: white;"><center>Web Calculator</center></h3>
+		<div class="output" id="output">0</div>
+		<div class="numpad">
+			<div class="numpad-grid">
+				<div class="numpad-item hover" onclick="set_output('1')">1</div>
+				<div class="numpad-item hover" onclick="set_output('2')">2</div>
+				<div class="numpad-item hover" onclick="set_output('3')">3</div>
+				<div class="numpad-item hover" onclick="set_output('4')">4</div>
+				<div class="numpad-item hover" onclick="set_output('5')">5</div>
+				<div class="numpad-item hover" onclick="set_output('6')">6</div>
+				<div class="numpad-item hover" onclick="set_output('7')">7</div>
+				<div class="numpad-item hover" onclick="set_output('8')">8</div>
+				<div class="numpad-item hover" onclick="set_output('9')">9</div>
+			</div>
+			<div class="numpad-item hover" onclick="set_output('0')" style="width: 130px; ">0</div>
+		</div>
+		<div class="operators">
+			<div class="operator-item hover" onclick="set_operator('+')">+</div>
+			<div class="operator-item hover" onclick="set_operator('-')">-</div>
+			<div class="operator-item hover" onclick="set_operator('*')">*</div>
+			<div class="operator-item hover" onclick="set_operator('/')">/</div>
+			<div class="operator-item hover" onclick="result()">=</div>
+		</div>
+	</div>
+	<center><p id="support_info"></p></center>
+	<script type="text/javascript">
+		cek_support_session_browser(){
+			// chek browser support
+			if (typeof(Storage) !=="undefined") {
+				//store
+				sessionStorage.setItem("info", "Support Session");
+				//set session
+				set_empty_session();
+				//Retrieve
+				document.getElementById("support_info").innerHTML = sessionStorage.getItem("info");
+			}else(
+				document.getElementById("support_info").innerHTML = "sorry, your browser does not support web Storage...";
+				)
+		}
+		function set_empty_session(){
+			sessionStorage.setItem('operation', '');
+			sessionStorage.setItem('nilai1', '');
+			sessionStorage.setItem('nilai2', '');
+			sessionStorage.setItem('hasil', '');
+		}
+		function set_output(input){
+			//var input = parseFloat(input);
+			var output_label = document.getElementById('output').innerHTML;
+			var output = '';
+			if(sessionStorage.getItem('operation')==''){
+				if (output_label!="0") {
+					output = sessionStorage.getItem('nilai1') + input;
+				}
+				sessionStorage.setItem('nilai1', output);
+			}else{
+				if(output_label!="0"){
+					output sessionStorage.getItem('nilai2' + input);
+				}
+				sessionStorage.setItem('nilai2', output);
+			}
+			//sessionStorage.setItem('nilai1', nilai1);
+			document.getElementById('output').innerHTML = output;
+		function set_operator(operator){
+			switch (operator){
+				case '+';
+					operation = "tambah";
+					break;
+				case '-';
+					operation = "krang";
+					break;
+				case '*';
+					operation = "kali";
+					break;
+				case '/';
+					operation = "bagi";
+					break;
+			}
+			sessionStorage.setItem('operation', operation);
+		}
+
+		function result(){
+			var hasil = 0;
+			var nilai1 = parseFloat(sessionStorage.getItem('nilai1'));
+			var nilai2 = parseFloat(sessionStorage.getItem('nilai2'));
+
+			switch (sessionStorage.getItem('operation')) {
+				case '+';
+					hasil = nilai1 + nilai2;
+					break;
+				case '-';
+					hasil = nilai1 - nilai2;
+					break;
+				case '*';
+					hasil = nilai1 * nilai2;
+					break;
+				case '/';
+					hasil = nilai1 / nilai2;
+					break;
+			}
+			sessionStorage.setItem('hasil', hasil);
+			document.getElementById('output').innerHTML = sessionStorage.getItem('hasil');
+			set_empty_session(); 
+		}		
+
+	</script>
+</body>
+</html>

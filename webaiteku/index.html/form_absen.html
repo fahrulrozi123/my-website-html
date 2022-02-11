@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form absen</title>
+</head>
+<body>
+	<style type="text/css">
+		body{
+			background-color: lightgray;
+		}
+		.logo{
+			height: 130px;
+			width: 400px;
+			background-color: orange;
+			border: 3px solid white;
+			text-align: center;
+			margin-top: 15px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 10px;
+		}
+		.logo p{
+			color: white;
+			margin-top: -2px;
+		}
+		.form{
+			height: 130px;
+			width: 400px;
+			background-color: white;
+			border-top: 5px solid orange;
+			border-left: 2px solid orange;
+			border-right: 2px solid orange;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 10px;
+		}
+		.form h1{
+			color: orange;
+			text-align: center;
+		}
+		.form h3{
+			text-align: center;
+			margin-top: -10px;
+		}
+		.form p{
+			text-align: center;
+			margin-top: -15px;
+		}
+		.email{
+			height: 80px;
+			width: 400px;
+			background-color: white;
+			border-left: 2px solid orange;
+			border-right: 2px solid orange;
+			margin: auto;
+			margin-top: -10px;
+		}
+		.email p{
+			padding-top: 10px;
+			margin-left: 10px;	
+		}
+		.email input{
+			margin-left: 10px;
+		}
+		.nama{
+			height: 80px;
+			width: 400px;
+			background-color: white;
+			border-left: 2px solid orange;
+			border-right: 2px solid orange;
+			margin: auto;
+			margin-top: -10px;
+		}
+		.nama p{
+			padding-top: 10px;
+			margin-left: 10px;	
+		}
+		.nama input{
+			margin: 7px;
+			margin-top: -20px;
+		}
+		.nim{
+			height: 80px;
+			width: 400px;
+			background-color: white;
+			border-left: 2px solid orange;
+			border-right: 2px solid orange;
+			margin: auto;
+			margin-top: -10px;
+		}
+		.nim p{
+			padding-top: 10px;
+			margin-left: 10px;	
+		}
+		.nim input{
+			margin: 7px;
+			margin-top: -20px;
+		}
+		.angkatan{
+			height: 110px;
+			width: 400px;
+			background-color: white;
+			border-left: 2px solid orange;
+			border-right: 2px solid orange;
+			margin: auto;
+			margin-top: -10px;
+		}
+		.angkatan p{
+			padding-top: 10px;
+			margin-left: 10px;	
+		}
+		.ooo{
+			margin-left: 455px;
+			margin-top: -6%;
+		}
+		.ruang{
+			height: 170px;
+			width: 400px;
+			background-color: white;
+			border-left: 2px solid orange;
+			border-right: 2px solid orange;
+			margin: auto;
+			margin-top: -38px;
+		}
+		.ruang p{
+			padding-top: 10px;
+			margin-left: 10px;	
+		}
+		.A{
+			margin-top: -15px;
+		}
+		.B{
+			margin-top: -15px;
+		}
+		.C{
+			margin-top: -15px;
+		}
+		.D{
+			margin-top: -15px;
+		}
+		.prodi{
+			height: 80px;
+			width: 400px;
+			background-color: white;
+			border-left: 2px solid orange;
+			border-right: 2px solid orange;
+			margin: auto;
+			margin-top: -10px;
+		}
+		.prodi p{
+			padding-top: 10px;
+			margin-left: 10px;	
+		}
+		.prodi select{
+			margin-left: 10px;	
+		}
+		.hadir{
+			height: 100px;
+			width: 400px;
+			background-color: white;
+			border-left: 2px solid orange;
+			border-right: 2px solid orange;
+			border-bottom: 2px solid orange;
+			margin: auto;
+			margin-top: -10px;
+		}
+		.hadir p{
+			margin-left: 10px;
+		}
+		.ya{
+			margin-left: 36%;
+			margin-top: -7%;
+		}
+		.kirim{
+			margin-top: 30px;
+		}
+	</style>
+	<div class="logo">
+		<img src="lol.png" height="100" width="100">
+		<p>Universitas Muhammadiyah Tangerang</p>
+	</div>
+
+	<div class="form">
+		<h1>Form Absen</h1>
+		<h3>Fakultas Teknik</h3>
+		<p>Angkatan 2019-2023</p>
+	</div>
+
+	<div class="email">
+		<p>
+			<label for="email">Email*</label>
+		</p>
+		<input type="Email" name="Email" placeholder="Email anda...">	
+	</div>
+
+	<div class="nama">
+		<p>
+			<label>Nama Mahasiswa</label>
+		</p>
+		<input type="username" name="username" placeholder="Nama Anda...">
+	</div>
+
+	<div class="nim">
+		<p>
+			<label>Nim</label>
+		</p>
+		<input type="username" name="username" placeholder="Nim Anda...">
+	</div>
+
+	<div class="angkatan">
+		<p>
+			<label>Angkatan</label>
+		</p>
+	</div>
+	<div class="ooo">
+		<p>
+			<input type="radio" name="Angkatan" value="radio"> 2019
+		</p>
+		<p>
+			<input type="radio" name="Angkatan" value="radio"> 2020
+		</p>
+	</div>
+
+	<br>
+
+	<div class="ruang">
+		<p>
+			<label>Kelas</label>
+		</p>
+		<div class="A">
+			<p>
+				<input type="radio" name="Angkatan" value="A"> A
+			</p>
+		</div>
+		<div class="B">
+			<p>
+				<input type="radio" name="Angkatan" value="B"> B
+			</p>
+		</div>
+		<div class="C">
+			<p>
+				<input type="radio" name="Angkatan" value="C"> C
+			</p>
+		</div>
+		<div class="D">
+			<p>
+				<input type="radio" name="Angkatan" value="D"> D
+			</p>
+		</div>
+	</div>
+
+	<div class="prodi">
+		<p>
+			<label>Prodi</label>
+		</p>
+		<select>
+			<option>Informatika</option>
+			<option>Mesin</option>
+			<option>Industri</option>
+			<option>Sipil</option>
+		</select>
+	</div>
+
+	<div class="hadir">
+		<p>
+			Hadir
+		</p>
+	</div>
+	<div class="ya">
+		<p>
+			<input type="radio" name="Angkatan" value="Ya"> Ya
+		</p>
+		<p>
+			<input type="radio" name="Angkatan" value="Tidak"> Tidak
+		</p>
+		<div class="kirim">
+			<input type="submit" name="submit" value="Kirim" style="color: white; background-color: orange;">
+		</div>
+	</div>
+	
+</body>
+</html>

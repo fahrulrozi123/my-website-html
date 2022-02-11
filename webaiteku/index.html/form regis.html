@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+</head>
+<body>
+	<style type="text/css">
+		body{
+			background-color: white;
+		}
+		.form{
+			background-color: lightgray;
+		}
+		.link{
+			background-color: black;
+		}
+		.link a{
+			margin: 2px;
+			color: white;
+		}
+		.link a:hover{
+			background-color: lightgray;
+			color: blue;
+		}
+		.active{
+		background-color: lightgray;
+		}
+		.nama input{
+			margin-left: 26px;
+		}
+		.email input{
+			margin-left: 26px;
+		}
+		.pw input{
+			margin-left: 5px;
+		}
+		.agama select{
+			margin-left: 25px;
+		}
+		.bio textarea{
+			margin-left: 19px;
+			margin-top: -10px;
+		}
+	</style>
+	<div class="link">
+		<a href="form login.html" >Login</a>
+        <a href="form contact.html">Contact</a>
+        <a class="active" href="form regis.html">Register</a>
+        <a href="form.html">form</a>
+	</link>
+	<div class="form">
+		<form action="Register.php" method="POST">
+			<fieldset>
+				<legend>Register</legend>
+				<div class="nama">
+					<p>
+						<label>Name</label>
+						<input type="text" name="Name" placeholder="your name...">
+					</p>
+				</div>
+				<div class="user">
+					<p>
+						<label>Username</label>
+						<input type="text" name="Username" placeholder="your Username...">
+					</p>
+				</div>
+				<div class="email">
+					<p>
+						<label>Email</label>
+						<input type="Email" name="Email" placeholder="Email Addres...">
+					</p>
+				</div>
+				<div class="pw">
+					<p>
+						<label>Password</label>
+						<input type="Password" name="Password" placeholder="your Password...">
+					</p>
+				</div>
+					<label>Jenis Kelamin</label>
+					<label><input type="radio" name="Jenis_Kelamin" value="Laki_Laki">Laki_Laki</label>
+					<label><input type="radio" name="Jenis_Kelamin" value="Perempuan">Perempuan</label>
+				<div class="agama">
+					<p>
+						<label>Agama</label>
+						<select name="Agama">
+							<option value="Islam">Islam</option>
+							<option value="Kristen">Kristen</option>
+							<option value="Budha">Budha</option>
+							<option value="Hindu">Hindu</option>
+						</select>
+					</p>
+				</div>
+				<div class="bio">
+					<label>Biografi</label>
+					<textarea name="Biografi"></textarea>
+				</div>
+					<p>
+						<input type="submit" name="submit" value="Daftar" style="color: black; background-color: lightgray">
+					</p>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

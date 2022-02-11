@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Login</title>
+  </head>
+  <body>
+    <style type="text/css">
+      body {
+        background-color: white;
+      }
+      .form {
+        background-color: lightgray;
+      }
+      .link {
+        background-color: black;
+      }
+      .link a {
+        margin: 2px;
+        color: white;
+      }
+      .link a:hover {
+        background-color: lightgray;
+        color: blue;
+      }
+      .active {
+        background-color: lightgray;
+      }
+      .pw input {
+        margin-left: 5px;
+      }
+    </style>
+    <div class="link">
+      <a class="active" href="form login.html">Login</a>
+      <a href="form contact.html">Contact</a>
+      <a href="form regis.html">Register</a>
+      <a href="form.html">form</a>
+    </div>
+    <div class="form">
+      <form action="login.php" method="POST">
+        <fieldset>
+          <legend>Login</legend>
+          <div class="user">
+            <p>
+              <label>Username</label>
+              <input type="text" name="Username" placeholder="Username..." />
+            </p>
+          </div>
+          <div class="pw">
+            <p>
+              <label>Password</label>
+              <input type="Password" name="Password" placeholder="Password..." />
+            </p>
+          </div>
+          <div class="remember">
+            <p>
+              <label><input type="checkbox" name="remember" value="remember" />remember me</label>
+            </p>
+          </div>
+          <p>
+            <input type="submit" name="submit" value="Login" style="color: black; background-color: lightgray" />
+          </p>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

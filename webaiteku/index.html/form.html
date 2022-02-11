@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Contact</title>
+</head>
+<body>
+	<style type="text/css">
+		body{
+			background-color: white;
+		}
+		.form{
+			background-color: lightgray;
+		}
+		.link{
+			background-color: black;
+		}
+		.link a{
+			margin: 2px;
+			color: white;
+		}
+		.link a:hover{
+			background-color: lightgray;
+			color: blue;
+		}
+		.active{
+			background-color: lightgray;
+			color: blue;
+		}
+		.tgl input{
+			margin-left: 20px;
+		}
+		.umur input{
+			margin-left: 45px;
+		}
+	</style>
+	<div class="link">
+		<a href="form login.html">Login</a>
+        <a href="form contact.html">Contact</a>
+        <a href="form regis.html" >Register</a>
+        <a class="active"href="form.html">form</a>
+	</div>
+	<div class="form">
+		<form action="Form.php" method="POST">
+			<fieldset>
+				<legend>Form</legend>
+				<p>
+					<label>Alamat Web</label>
+					<input type="url" name="Name" placeholder="Masukan url web...">
+				</p>
+				<div class="tgl">
+					<p>
+						<label>Tgl Lahir</label>
+						<input type="date" name="tanggal">
+					</p>
+				</div>
+				<div class="umur">
+					<p>
+						<label>Umur</label>
+						<input type="number" min="10" max="90" name="umur">
+					</p>
+				</div>
+				<p>
+				<input type="submit" name="submit" value="Send"style="color: black; background-color: lightgray">
+				</p>
+				<br />
+			</fieldset>
+		</form>
+	</div>
+	<center>
+				<p>Klik untuk kembali ke profile saya
+					<a href="file:///C:/Users/ACER/Documents/webaiteku/index.html/cv-fahrul.html">kembali</a>
+				</p>
+				<p>Atau langsung ke menu
+					<a href="file:///C:/Users/ACER/Documents/webaiteku/index.html/link%20me.html">awal</a>
+				</p> 
+			</center>
+</body>
+</html>

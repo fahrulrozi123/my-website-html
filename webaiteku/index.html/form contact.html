@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Contact</title>
+</head>
+<body>
+	<style type="text/css">
+		body{
+			background-color: white;
+		}
+		.form{
+			background-color: lightgray;
+		}
+		.link{
+			background-color: black;
+		}
+		.link a{
+			margin: 2px;
+			color: white;
+		}
+		.link a:hover{
+			background-color: lightgray;
+			color: blue;
+		}
+		.active{
+			background-color: lightgray;
+		}
+		.nama input{
+			margin-left: 10px;
+		}
+		.email input{
+			margin-left: 10px;
+		}
+	</style>
+	<div class="link">
+		<a href="form login.html">Login</a>
+        <a class="active" href="form contact.html">Contact </a>
+        <a href="form regis.html">Register</a>
+        <a href="form.html">form</a>
+	</div>
+	<div class="form">
+		<form action="contact.php" method="POST">
+			<fieldset>
+				<legend>Contact</legend>
+				<div class="nama">
+					<p>
+						<label>Name</label>
+						<input type="text" name="Name" placeholder="your name...">
+					</p>
+				</div>
+				<div class="subjek">
+					<p>
+						<label>Subject</label>
+						<input type="text" name="Subject" placeholder="your subject...">
+					</p>
+				</div>
+				<div class="email">
+					<p>
+						<label>Email</label>
+						<input type="Email" name="Email" placeholder="your Email...">
+					</p>
+				</div>
+				<p>
+				<input  type="submit" name="submit" value="Send" style="color: black; background-color: lightgray">
+				</p>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>
